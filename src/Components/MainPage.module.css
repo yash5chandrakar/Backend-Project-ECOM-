@@ -1,0 +1,57 @@
+.tableDiv {
+    width: 99vw;
+    text-align: center;
+
+}
+
+.outerDiv {
+    height: 80%;
+    overflow: auto;
+}
+
+table {
+    border: 1px solid black;
+    padding: 8px;
+    margin: 0px 5px;
+}
+
+td,
+th {
+    border: 1px solid greenyellow;
+    font-size: 20px;
+    padding: 8px;
+}
+
+th {
+    background-color: gray;
+}
+
+
+td:nth-child(6) button {
+    background-color: red;
+    color: white;
+    font-weight: 600;
+}
+
+td:nth-child(5) button {
+    background-color: aqua;
+    /* color: white; */
+    font-weight: 600;
+}
+
+button {
+    border-radius: 10px;
+    padding: 5px;
+
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    font-family: cursive;
+    font-size: 40px;
+    /* color: violet; */
+}
