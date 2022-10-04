@@ -7,6 +7,7 @@ const MainPage = () => {
 
     const [data, setData] = useState([]);
     const [render, setRender] = useState("")
+
     useEffect(() => {
         async function getData() {
             setData("Loading")

@@ -25,7 +25,6 @@ function App() {
         </Route>
         <Route path='/aboutUs' element={<AboutUs />}></Route>
         <Route path='/contactUs' element={<ContactUs />}></Route>
-        {/* <Route path='/EditItem' element={<EditItem />}></Route> */}
         <Route path='*' element={<NoItemsFound />}></Route>
       </Routes>
     </BrowserRouter>
