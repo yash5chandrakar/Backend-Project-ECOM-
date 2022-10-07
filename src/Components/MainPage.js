@@ -93,7 +93,7 @@ const MainPage = () => {
                     <tbody>
                         {data ? data : ""}
                     </tbody>
-                    {/* {data ? data : ""} */}
+
                 </table>
             </div>
 

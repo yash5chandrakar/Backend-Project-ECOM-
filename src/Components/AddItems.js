@@ -18,7 +18,36 @@ const AddItems = () => {
     const [warranty, setWarranty] = useState("")
 
 
+    useEffect(() => {
+        if (params.id && params.id !== "") {
+            async function getItem() {
+                const res = await fetch(`/getSingleItem?id=${params.id}`, {
+                    method: "GET",
+                }).then((resp => resp.json()))
+                setImageUrl(res.image)
+                setName(res.name)
+                setPrice(res.price)
+                setBrand(res.brand)
+                setDesc(res.desc)
+                setWarranty(res.warranty)
+                // console.log(res.highlights)
 
+                if (res.highlights && res.highlights[0] !== "") {
+                    setHighlights1(res.highlights[0])
+                }
+                if (res.highlights && res.highlights[1] !== "") {
+                    setHighlights2(res.highlights[1])
+                }
+                if (res.highlights && res.highlights[2] !== "") {
+                    setHighlights3(res.highlights[2])
+                }
+                if (res.highlights && res.highlights[3] !== "") {
+                    setHighlights4(res.highlights[3])
+                }
+            }
+            getItem()
+        }
+    }, [params])
 
     async function handleSubmit(e) {
         e.preventDefault()
@@ -129,6 +158,15 @@ const AddItems = () => {
                         <input type={'text'} onChange={(e) => setImageUrl(e.target.value)} required /> <br />
                     </div>
                 </div>
+                <div className={styles.row}>
+                    <div >
+                        <label htmlFor='imageUrl'>Warranty Period(in Years) : </label>
+                    </div>
+                    <div >
+                        <input id={styles.warranty} type={'number'} min="0" max="10" value={warranty} onChange={(e) => setWarranty(e.target.value)}
+                            placeholder="Enter Warranty Period" required />
+                    </div>
+                </div>
                 <div className={styles.submitBtn}>
                     <input type={'submit'} value="Submit" required />
                 </div>
@@ -138,3 +176,5 @@ const AddItems = () => {
 }
 
 export default AddItems;
+
+
