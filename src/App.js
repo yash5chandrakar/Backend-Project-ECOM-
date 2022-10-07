@@ -1,4 +1,4 @@
-import { BrowserRouter, Link, NavLink, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
 import './App.css';
 import AboutUs from './Components/AboutUs';
 import AddItems from './Components/AddItems';
