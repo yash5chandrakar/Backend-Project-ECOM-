@@ -1,4 +1,4 @@
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Link, NavLink, Route, Routes } from 'react-router-dom';
 import './App.css';
 import AboutUs from './Components/AboutUs';
 import AddItems from './Components/AddItems';
@@ -7,15 +7,24 @@ import MainPage from './Components/MainPage';
 import NoItemsFound from './Components/NoItemsFound';
 
 function App() {
+  const activeStyle = {
+    color: "orange"
+  }
 
   return (
     <BrowserRouter>
       <nav>
         <ul>
-          <li><Link to={"/"}>Home</Link></li>
-          <li><Link to={"/addItemPage"}>Add Item</Link></li>
-          <li><Link to={"/aboutUs"}>About Us</Link></li>
-          <li><Link to={"/contactUs"}>Contact Us</Link></li>
+          <li><NavLink className={"mainTitle"} to={"/"}>Database Editor</NavLink></li>
+          <li><NavLink style={({ isActive }) =>
+            isActive ? activeStyle : undefined
+          } to={"/addItemPage"}>Add Item</NavLink></li>
+          <li><NavLink style={({ isActive }) =>
+            isActive ? activeStyle : undefined
+          } to={"/aboutUs"}>About Us</NavLink></li>
+          <li><NavLink style={({ isActive }) =>
+            isActive ? activeStyle : undefined
+          } to={"/contactUs"}>Contact Us</NavLink></li>
         </ul>
       </nav>
       <Routes>

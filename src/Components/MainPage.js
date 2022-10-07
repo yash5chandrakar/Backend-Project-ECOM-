@@ -6,41 +6,36 @@ const MainPage = () => {
     const navigate = useNavigate()
 
     const [data, setData] = useState([]);
-    const [render, setRender] = useState("")
+    const [render, setRender] = useState("");
+    const [priceToggle, setPriceToggle] = useState(false);
+    const [toggleId, setToggleId] = useState("");
+    const [entries, setEntries] = useState(0);
 
     useEffect(() => {
         async function getData() {
             setData("Loading")
-            const res = await fetch("/getItems").then(res => res.json())
+            let res = await fetch("/getItems").then(res => res.json())
             let sno = 1;
-            const myData = (
-                <table className={styles.tableDiv}>
-                    <thead>
-                        <tr>
-                            <th>S.no</th>
-                            <th>Name</th>
-                            <th>Brand</th>
-                            <th>Price</th>
-                            <th>Edit</th>
-                            <th>Delete</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {res.map(element => {
-                            return (<tr key={element._id}>
-                                <td>{sno++}</td>
-                                <td>{element.name}</td>
-                                <td>{element.brand}</td>
-                                <td>{element.price}</td>
-                                <td><button onClick={() => editItem(element.name)}>Edit Item</button></td>
-                                <td><button onClick={() => deleteItem(element.name)}>Delete Item</button></td>
-                            </tr>
-                            )
-                        })}
-                    </tbody>
-                </table>
+            if (priceToggle === false) {
+                res = res.sort((a, b) => a.price - b.price)
+            }
+            else {
+                res = res.sort((a, b) => b.price - a.price)
+            }
+
+            setEntries(res.length)
+            const myData = (res.map(element => {
+                // console.log(element.image)
+                return (<tr key={element._id}><td>{sno++}</td>
+                    <td>{element.name}</td>
+                    <td>{element.brand}</td>
+                    <td>{element.highlights}<br />Warranty : {element.warranty} Years</td>
+                    <td>{element.price}</td>
+                    <td><img src={element.image} alt="Img.jpg"></img></td>
+                    <td><button onClick={() => editItem(element.name)}>Edit Item</button></td>
+                    <td><button onClick={() => deleteItem(element.name)}>Delete Item</button></td></tr>)
+            })
             )
-            // console.log(res) /   
             setData(myData)
         }
         getData()
@@ -62,10 +57,46 @@ const MainPage = () => {
         }
     }
 
+    function sortData() {
+        setPriceToggle(!priceToggle)
+        if (priceToggle) {
+            setToggleId("🢁")
+        }
+        else {
+            setToggleId("🢃")
+        }
+        setRender(new Date())
+        // console.log(priceToggle)
+    }
+
     return (
         <div className={styles.outerDiv}>
-            <h1>Showing All Items</h1>
-            {data ? data : ""}
+            <div className={styles.titleDiv}>
+                <h1>Showing All Items</h1>
+                <p>Total Entries - {entries}</p>
+            </div>
+
+            <div className={styles.tableDiv}>
+                <table >
+                    <thead>
+                        <tr>
+                            <th>S.no</th>
+                            <th>Name </th>
+                            <th>Brand</th>
+                            <th>Highlights</th>
+                            <th>Price <button onClick={sortData}>Sort {toggleId}</button></th>
+                            <th>Image</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {data ? data : ""}
+                    </tbody>
+                    {/* {data ? data : ""} */}
+                </table>
+            </div>
+
         </div>
     )
 }

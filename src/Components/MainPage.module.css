@@ -1,15 +1,35 @@
 .tableDiv {
-    width: 99vw;
+    display: flex;
+    justify-content: center;
     text-align: center;
+    padding: 10px 5px;
+}
 
+td img {
+    height: 100px;
+}
+
+th button {
+    border-radius: 50px;
+    font-weight: 800;
 }
 
 .outerDiv {
-    height: 80%;
     overflow: auto;
 }
 
+.titleDiv {
+    background-color: rgb(189, 185, 185);
+}
+
+.titleDiv p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+
 table {
+    width: 95%;
     border: 1px solid black;
     padding: 8px;
     margin: 0px 5px;
@@ -23,17 +43,25 @@ th {
 }
 
 th {
-    background-color: gray;
+    background-color: #333;
+    color: white;
 }
 
+tr:nth-child(even) {
+    background-color: rgb(210, 204, 204);
+}
 
-td:nth-child(6) button {
+td:nth-child(4) {
+    width: 20%;
+}
+
+td:nth-child(8) button {
     background-color: red;
     color: white;
     font-weight: 600;
 }
 
-td:nth-child(5) button {
+td:nth-child(7) button {
     background-color: aqua;
     /* color: white; */
     font-weight: 600;

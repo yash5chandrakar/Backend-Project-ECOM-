@@ -1,6 +1,10 @@
 nav {
-    background-color: rgb(222, 213, 213);
+    background: linear-gradient(to right, gray, silver);
+    /* background-color: rgb(162, 55, 162); */
     border: 1px solid black;
+    border-bottom: 3px solid black;
+    position: sticky;
+    top: 0px;
 }
 
 ul {
@@ -13,4 +17,11 @@ a {
     text-decoration: none;
     font-size: 30px;
     font-family: cursive;
+    color: white;
+    font-weight: 800;
+}
+
+.mainTitle {
+    color: yellowgreen;
+    text-shadow: 5px 5px 5px black;
 }
