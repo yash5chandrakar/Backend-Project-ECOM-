@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
 import styles from "./AddItems.module.css"
 
 const AddItems = () => {
     const params = useParams()
-    // console.log(params)
+    console.log(params)
 
     const [name, setName] = useState("")
     const [price, setPrice] = useState("")
@@ -72,6 +71,7 @@ const AddItems = () => {
         else {
             alert("Error! Some Details were incorrect.")
         }
+<<<<<<< HEAD
     }
 
     useEffect(() => {
@@ -170,6 +170,63 @@ const AddItems = () => {
                     <div >
                         <input id={styles.warranty} type={'number'} min="0" max="10" value={warranty} onChange={(e) => setWarranty(e.target.value)}
                             placeholder="Enter Warranty Period" required />
+=======
+     }
+    return (
+        <div className={styles.container}>
+            <form onSubmit={(e) => handleSubmit(e)}>
+                <h1>Add an Item</h1><br/>
+                <p>You can add and edit your details of your item price, description etc. </p><br/>
+                <div className={styles.row}>
+                    <div className={styles.col-25}>
+                       <label htmlFor='name' >Name : </label>
+                    </div>
+                    <div className={styles.col-75}>
+                       <input  value={name} type={'text'} required onChange={(e) => setName(e.target.value)} /> <br />
+                    </div>
+                </div>
+                <div className={styles.row}>
+                   <div className={styles.col-25}>    
+                      <label htmlFor='price'>Price : </label>
+                    </div>
+                    <div className={styles.col-75}>
+                      <input value={price} type={'text'} required onChange={(e) => setPrice(e.target.value)} /> <br />
+                    </div>
+                </div>
+                <div className={styles.row}>
+                   <div className={styles.col-25}>  
+                      <label htmlFor='brand'>Brand Name : </label>
+                    </div>
+                    <div className={styles.col-75}>
+                      <input value={brand} type={'text'} required onChange={(e) => setBrand(e.target.value)} /> <br />
+                    </div>
+                </div>
+                <div className={styles.row}>
+                   <div className={styles.col-25}>  
+                      <label htmlFor='highlights'>Highlights : </label>
+                    </div>
+                    <div className={styles.col-80}>
+                      <input  value={brand} type={'text'} required onChange={(e) => setBrand(e.target.value)} /> 
+                      <input  value={brand} type={'text'} required onChange={(e) => setBrand(e.target.value)} /> <br />
+                      <input  value={brand} type={'text'} required onChange={(e) => setBrand(e.target.value)} /> 
+                      <input  value={brand} type={'text'} required onChange={(e) => setBrand(e.target.value)} /> <br />
+                    </div>
+                </div>
+                <div className={styles.row}>
+                   <div className={styles.col-25}>
+                      <label htmlFor='desc'>Description (Short) : </label><br /> 
+                   </div>
+                   <div className={styles.col-75}>
+                      <textarea  type={'text'} required onChange={(e) => setDesc(e.target.value)} value={desc} /> <br />
+                   </div>
+                </div>
+                <div className={styles.row}>
+                   <div className={styles.col-25}>
+                      <label htmlFor='imageUrl'>Image Url: </label> 
+                    </div>
+                    <div className={styles.col-75}>
+                      <input  type={'text'} onChange={(e) => setImageUrl(e.target.value)} required /> <br />
+>>>>>>> a8c62fb87bf3395bbd1c422320dea23630cdac31
                     </div>
                 </div>
                 <div className={styles.submitBtn}>
@@ -181,6 +238,7 @@ const AddItems = () => {
 }
 
 export default AddItems;
+<<<<<<< HEAD
 
 // import React, { useEffect, useState } from 'react'
 // import { useParams } from 'react-router-dom'
@@ -266,3 +324,5 @@ export default AddItems;
 // export default AddItems
 
 // More things to include :- tags[], highlights,ratings
+=======
+>>>>>>> a8c62fb87bf3395bbd1c422320dea23630cdac31
