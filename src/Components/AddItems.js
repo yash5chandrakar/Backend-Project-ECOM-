@@ -112,7 +112,7 @@ const AddItems = () => {
                         <label htmlFor='name' >Name : </label>
                     </div>
                     <div className={styles.col - 75}>
-                        <input value={name} type={'text'} required onChange={(e) => setName(e.target.value)} /> <br />
+                        <input value={name} type={'text'} required onChange={(e) => setName(e.target.value)} placeholder="Enter Product Name" /> <br />
                     </div>
                 </div>
                 <div className={styles.row}>
@@ -120,7 +120,7 @@ const AddItems = () => {
                         <label htmlFor='price'>Price : </label>
                     </div>
                     <div className={styles.col - 75}>
-                        <input value={price} type={'text'} required onChange={(e) => setPrice(e.target.value)} /> <br />
+                        <input value={price} type={'text'} required onChange={(e) => setPrice(e.target.value)} placeholder="Enter Procuct Price" /> <br />
                     </div>
                 </div>
                 <div className={styles.row}>
@@ -128,26 +128,26 @@ const AddItems = () => {
                         <label htmlFor='brand'>Brand Name : </label>
                     </div>
                     <div className={styles.col - 75}>
-                        <input value={brand} type={'text'} required onChange={(e) => setBrand(e.target.value)} /> <br />
+                        <input value={brand} type={'text'} required onChange={(e) => setBrand(e.target.value)} placeholder="Enter Brand Name" /> <br />
                     </div>
                 </div>
                 <div className={styles.row}>
                     <div className={styles.col - 25}>
-                        <label htmlFor='highlights'>Highlights : </label>
+                        <label htmlFor='highlights'>Highlights : <br /> (Features)</label>
                     </div>
                     <div className={styles.col - 80}>
-                        <input value={highlights1} type={'text'} required onChange={(e) => setHighlights1(e.target.value)} />
-                        <input value={highlights2} type={'text'} required onChange={(e) => setHighlights2(e.target.value)} /> <br />
-                        <input value={highlights3} type={'text'} required onChange={(e) => setHighlights3(e.target.value)} />
-                        <input value={highlights4} type={'text'} required onChange={(e) => setHighlights4(e.target.value)} /> <br />
+                        <input value={highlights1} type={'text'} required onChange={(e) => setHighlights1(e.target.value)} placeholder="Enter Highlight 1" />
+                        <input value={highlights2} type={'text'} required onChange={(e) => setHighlights2(e.target.value)} placeholder="Enter Highlight 2" /> <br />
+                        <input value={highlights3} type={'text'} required onChange={(e) => setHighlights3(e.target.value)} placeholder="Enter Highlight 3" />
+                        <input value={highlights4} type={'text'} required onChange={(e) => setHighlights4(e.target.value)} placeholder="Enter Highlight 4" /> <br />
                     </div>
                 </div>
                 <div className={styles.row}>
                     <div className={styles.col - 25}>
-                        <label htmlFor='desc'>Description (Short) : </label><br />
+                        <label htmlFor='desc'>Description (Short) : </label>
                     </div>
                     <div className={styles.col - 75}>
-                        <textarea type={'text'} required onChange={(e) => setDesc(e.target.value)} value={desc} /> <br />
+                        <textarea type={'text'} required onChange={(e) => setDesc(e.target.value)} value={desc} placeholder="Enter Product Description" /> <br />
                     </div>
                 </div>
                 <div className={styles.row}>
@@ -155,7 +155,7 @@ const AddItems = () => {
                         <label htmlFor='imageUrl'>Image Url: </label>
                     </div>
                     <div className={styles.col - 75}>
-                        <input type={'text'} value={imageFile} onChange={(e) => setImageUrl(e.target.value)} required /> <br />
+                        <input type={'text'} value={imageFile} onChange={(e) => setImageUrl(e.target.value)} placeholder="Enter Image URL" required /> <br />
                     </div>
                 </div>
                 <div className={styles.row}>
