@@ -1,4 +1,4 @@
-# Database Editor 
+# Database Editor for E-COM Project
 This is a database editor app which you can use to edit your database content, add new items and basically manage your database easily. It features good UI and has several functions which are suited to your needs. 
 
 # Tech Stacks
