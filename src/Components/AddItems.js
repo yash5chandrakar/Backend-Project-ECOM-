@@ -136,10 +136,10 @@ const AddItems = () => {
                         <label htmlFor='highlights'>Highlights : </label>
                     </div>
                     <div className={styles.col - 80}>
-                        <input value={brand} type={'text'} required onChange={(e) => setBrand(e.target.value)} />
-                        <input value={brand} type={'text'} required onChange={(e) => setBrand(e.target.value)} /> <br />
-                        <input value={brand} type={'text'} required onChange={(e) => setBrand(e.target.value)} />
-                        <input value={brand} type={'text'} required onChange={(e) => setBrand(e.target.value)} /> <br />
+                        <input value={highlights1} type={'text'} required onChange={(e) => setHighlights1(e.target.value)} />
+                        <input value={highlights2} type={'text'} required onChange={(e) => setHighlights2(e.target.value)} /> <br />
+                        <input value={highlights3} type={'text'} required onChange={(e) => setHighlights3(e.target.value)} />
+                        <input value={highlights4} type={'text'} required onChange={(e) => setHighlights4(e.target.value)} /> <br />
                     </div>
                 </div>
                 <div className={styles.row}>
@@ -155,7 +155,7 @@ const AddItems = () => {
                         <label htmlFor='imageUrl'>Image Url: </label>
                     </div>
                     <div className={styles.col - 75}>
-                        <input type={'text'} onChange={(e) => setImageUrl(e.target.value)} required /> <br />
+                        <input type={'text'} value={imageFile} onChange={(e) => setImageUrl(e.target.value)} required /> <br />
                     </div>
                 </div>
                 <div className={styles.row}>
