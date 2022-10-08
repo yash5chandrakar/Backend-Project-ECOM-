@@ -33,8 +33,10 @@ Various APIs provide means to add, delete, edit an item in the database. They ar
 <ul>
         <li><strong>Main Page</strong>  :- This page displays all data present in the DB. <br/><br/>
             <img src="https://i.imgur.com/r4HOJXL.png" alt="Main.png">
-        </li><strong>Add Item Page</strong>  :- In this page you can enter details for the product and then submit it to the DB. <br/><br/>
+        </li>
+        <li><strong>Add Item Page</strong>  :- In this page you can enter details for the product and then submit it to the DB. <br/><br/>
         <img src="https://i.imgur.com/pzECSTK.png" alt="AddItem.png">
+        </li>  
         <li><strong>Edit Item</strong>  :- When Edit Item is clicked user is moved to the add item page with all details automatically entered in the respective inputs for easier editing. <br/><br/>
             <img src="https://i.imgur.com/5Xmw8ZA.png" alt="EditItem.png">
             <h1 style="font-size:20px ;" align="center">🢃</h1>
