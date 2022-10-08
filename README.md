@@ -45,7 +45,7 @@ Various APIs provide means to add, delete, edit an item in the database. They ar
             <img src="https://i.imgur.com/158yYiW.png" alt="Contact.png">
         </li>
         
-    </ul>
+</ul>
 
 
 
