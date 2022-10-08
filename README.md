@@ -4,10 +4,10 @@ This is a database editor app which you can use to edit your database content, a
 # Tech Stacks
 Tech stacks used in this project are :-
 <ol>
-  <li>Node JS</li>
-  <li>Express JS</li>
-  <li>React JS</li>
-  <li>MongoDB</li>
+  <li><strong>Node JS</strong></li>
+  <li><strong>Express JS</strong></li>
+  <li><strong>React JS</strong></li>
+  <li><strong>MongoDB</strong></li>
 </ol>
 
 # Inspiration
