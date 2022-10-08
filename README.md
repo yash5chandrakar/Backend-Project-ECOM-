@@ -20,5 +20,12 @@ This website has 4 main routes :-
 3. About Page :- Self-explanatory.
 4. Contact Us Page :- Self-explanatory.
 
+# API Calls
+Various APIs provide means to add, delete, edit an item in the database. They are as follows :-
+1. "/api/getSingleItem" - for getting a single Item (for Edit).
+2. "/api/getItems" - To get all items present in DB.
+3. "/api/addItems" - To add Item in the DB.
+4. "/api/deleteItem" - To Delete an Item in DB.
+
 
 
