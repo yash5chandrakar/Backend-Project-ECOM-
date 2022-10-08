@@ -22,13 +22,12 @@ This website has 4 main routes :-
 
 # API Calls
 Various APIs provide means to add, delete, edit an item in the database. They are as follows :-
-
 <ol>
-        <li><strong>"/api/getSingleItem"</strong> - for getting a single Item (for Edit).</li>
-        <li><strong>"/api/getItems"</strong> - To get all items present in DB.</li>
-        <li><strong>"/api/addItems"</strong> - To add Item in the DB.</li>
-        <li><strong>"/api/deleteItem"</strong> - To Delete an Item in DB.</li> 
-    </ol>
+  <li><strong>"/api/getSingleItem"</strong> - for getting a single Item (for Edit).</li>
+  <li><strong>"/api/getItems"</strong> - To get all items present in DB.</li>
+  <li><strong>"/api/addItems"</strong> - To add Item in the DB.</li>
+  <li><strong>"/api/deleteItem"</strong> - To Delete an Item in DB.</li> 
+</ol>
 
 
 
