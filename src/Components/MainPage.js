@@ -14,7 +14,7 @@ const MainPage = () => {
     useEffect(() => {
         async function getData() {
             setData("Loading")
-            let res = await fetch("/getItems").then(res => res.json())
+            let res = await fetch("/api/getItems").then(res => res.json())
             let sno = 1;
             if (priceToggle === false) {
                 res = res.sort((a, b) => a.price - b.price)
@@ -48,7 +48,7 @@ const MainPage = () => {
 
     async function deleteItem(elementName) {
         // console.log(elementName)
-        const res = await fetch(`/deleteItem?name=${elementName}`, {
+        const res = await fetch(`/api/deleteItem?name=${elementName}`, {
             method: "DELETE"
         }).then((response) => response.json())
         if (res.operation) {
@@ -96,7 +96,6 @@ const MainPage = () => {
 
                 </table>
             </div>
-
         </div>
     )
 }

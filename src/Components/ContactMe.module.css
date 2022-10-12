@@ -1,0 +1,43 @@
+.containerSecond {
+    padding: 20px 100px;
+    height: 93vh;
+    background-color: #f2f2f2;
+    overflow-x: hidden;
+}
+
+.container h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.headContainer {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    /* background: linear-gradient(to right, wheat, gray); */
+}
+
+.container p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 20px;
+}
+
+.myLabel {
+    padding: 15px 0px;
+}
+
+.submitDiv {
+    position: relative;
+    top: 150px;
+    text-align: center;
+    left: 500px;
+}
+
+.submitDiv button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    /* float: right; */
+}

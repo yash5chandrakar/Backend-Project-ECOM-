@@ -2,7 +2,8 @@ import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
 import './App.css';
 import AboutUs from './Components/AboutUs';
 import AddItems from './Components/AddItems';
-import ContactUs from './Components/ContactUs';
+import ContactMe from './Components/ContactMe';
+// import ContactUs from './Components/ContactUs';
 import MainPage from './Components/MainPage';
 import NoItemsFound from './Components/NoItemsFound';
 
@@ -33,7 +34,7 @@ function App() {
           <Route path='/addItemPage/:id' element={<AddItems />}></Route>
         </Route>
         <Route path='/aboutUs' element={<AboutUs />}></Route>
-        <Route path='/contactUs' element={<ContactUs />}></Route>
+        <Route path='/contactUs' element={<ContactMe />}></Route>
         <Route path='*' element={<NoItemsFound />}></Route>
       </Routes>
     </BrowserRouter>

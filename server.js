@@ -25,16 +25,15 @@ myMongoClient.connect(location, (err, server) => {
 
 app.use(myexpress.json())
 
-app.get("/getSingleItem", (req, res) => {            // getting a single item for editing
+app.get("/api/getSingleItem", (req, res) => {            // getting a single item for editing
     // console.log(req.query.id)rs
     myDatabase.findOne({ name: req.query.id }, (err, result) => {
         if (err) console.log(err)
         res.send(result)
     })
-
 })
 
-app.get("/getItems", (req, res) => {                   // getting all items
+app.get("/api/getItems", (req, res) => {                   // getting all items
     myDatabase.find({}).toArray(function (err, result) {
         if (err) throw err;
         // console.log(result);
@@ -42,7 +41,7 @@ app.get("/getItems", (req, res) => {                   // getting all items
     });
 })
 
-app.post("/addItems", (req, res) => {
+app.post("/api/addItems", (req, res) => {
     myDatabase.insertOne(req.body, (err) => {             // inserting single data
         if (err) {
             return console.log("Data indsertion failed")
@@ -54,7 +53,7 @@ app.post("/addItems", (req, res) => {
 
 app.use(myexpress.urlencoded({ extended: true }))
 
-app.delete("/deleteItem", (req, res) => {                        // deleting single item by name
+app.delete("/api/deleteItem", (req, res) => {                        // deleting single item by name
     const itemName = req.query.name
     myDatabase.deleteOne({ name: itemName }, function (err, obj) {
         if (err) throw err;
